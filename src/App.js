@@ -9,7 +9,7 @@ export default function App() {
         <header>
           <h1>What's the weather in...</h1>
         </header>
-        <Weather />
+        <Weather defaultCity="Caracas" />
 
         <footer>
           Coded by Nai Antillano and is{" "}
