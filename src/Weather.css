@@ -144,6 +144,10 @@
   margin-top: 1rem;
 }
 
+span {
+  font-size: 1.6rem;
+}
+
 @media (min-width: 800px) {
   .Weather .searcher {
     margin: 1rem 0rem;

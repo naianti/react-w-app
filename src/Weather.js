@@ -4,7 +4,6 @@ import axios from "axios";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
-
   const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
@@ -77,7 +76,7 @@ export default function Weather(props) {
               <div className="card-body">
                 <section>
                   <p>NOW</p>
-                  <span>{weatherData.temperature}</span>
+                  <span>{Math.round(weatherData.temperature)}</span>
                   <span>°C</span>
 
                   <figure>
@@ -86,7 +85,8 @@ export default function Weather(props) {
 
                   <h4 className="text-capitalize">{weatherData.description}</h4>
                   <p>
-                    Feels like <span>{weatherData.feelingTemp}</span> °C
+                    Feels like{" "}
+                    <span>{Math.round(weatherData.feelingTemp)} °C</span>
                   </p>
                 </section>
               </div>
