@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -11,11 +13,10 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       city: response.data.name,
       country: response.data.sys.country,
-      date: "Saturday",
       description: response.data.weather[0].description,
-      time: "21:25",
       feelingTemp: response.data.main.feels_like,
-      icon: "https://uxwing.com/wp-content/themes/uxwing/download/27-weather/weather.png",
+      icon: "https://weatherapp-nai-project.netlify.app/images/02n.png",
+      date: new Date(),
     });
 
     setReady(true);
@@ -52,20 +53,27 @@ export default function Weather(props) {
                 <section>
                   <h2>{weatherData.city + ", " + weatherData.country}</h2>
                   <p>
-                    <img src="images/refresh.png" alt="refresh icon" />
-                    Latest report:
+                    <img
+                      src="https://weatherapp-nai-project.netlify.app/images/refresh.png"
+                      alt="refresh icon"
+                    />
+                    <span>Latest report:</span>
                   </p>
 
                   <p>
-                    <span>
-                      <img src="images/calendar.png" alt="calendar icon" />
-                      <span>{weatherData.date}</span>{" "}
-                    </span>
+                    <img
+                      src="https://weatherapp-nai-project.netlify.app/images/calendar.png"
+                      alt="calendar icon"
+                    />
+                    <FormattedTime date={weatherData.date} />
                   </p>
 
                   <p>
-                    <img src="images/stopwatch.png" alt="timer icon" />
-                    <span>{weatherData.time}</span>
+                    <img
+                      src="https://weatherapp-nai-project.netlify.app/images/stopwatch.png"
+                      alt="timer icon"
+                    />
+                    <FormattedDate date={weatherData.date} />
                   </p>
                 </section>
               </div>
@@ -75,15 +83,20 @@ export default function Weather(props) {
             <div className="card-forecast-temp">
               <div className="card-body">
                 <section>
-                  <p>NOW</p>
-                  <span>{Math.round(weatherData.temperature)}</span>
-                  <span>°C</span>
+                  <h4>NOW</h4>
+                  <span className="temperature">
+                    {Math.round(weatherData.temperature)} °C
+                  </span>
 
                   <figure>
-                    <img src={weatherData.icon} alt="weather icon" />
+                    <img
+                      width="90px"
+                      src={weatherData.icon}
+                      alt="weather icon"
+                    />
                   </figure>
 
-                  <h4 className="text-capitalize">{weatherData.description}</h4>
+                  <h5 className="text-capitalize">{weatherData.description}</h5>
                   <p>
                     Feels like{" "}
                     <span>{Math.round(weatherData.feelingTemp)} °C</span>

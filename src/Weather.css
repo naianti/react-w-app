@@ -48,6 +48,16 @@
 .Weather .card-forecast-city img {
   display: inline-flex;
   width: 1.2rem;
+  margin-left: 1rem;
+}
+
+.Weather .card-forecast-city span {
+  margin-left: 0.6rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: bolder;
 }
 
 .Weather .card-forecast-city,
@@ -142,10 +152,6 @@
   text-transform: capitalize;
   line-height: 0.15rem;
   margin-top: 1rem;
-}
-
-span {
-  font-size: 1.6rem;
 }
 
 @media (min-width: 800px) {
