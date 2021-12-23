@@ -1,5 +1,5 @@
 import React from "react";
-
+import WeatherIcon from "./WeatherIcon";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
 
@@ -48,7 +48,7 @@ export default function WeatherDescription(props) {
               </span>
 
               <figure>
-                <img width="90px" src={props.data.icon} alt="weather icon" />
+                <WeatherIcon code={props.data.icon} />
               </figure>
 
               <h5 className="text-capitalize">{props.data.description}</h5>

@@ -16,7 +16,7 @@ export default function Weather(props) {
       country: response.data.sys.country,
       description: response.data.weather[0].description,
       feelingTemp: response.data.main.feels_like,
-      icon: "https://weatherapp-nai-project.netlify.app/images/02n.png",
+      icon: response.data.weather[0].icon,
       date: new Date(),
     });
 
