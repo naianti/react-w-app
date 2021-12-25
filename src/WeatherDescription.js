@@ -2,6 +2,7 @@ import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherDescription(props) {
   return (
@@ -43,9 +44,7 @@ export default function WeatherDescription(props) {
           <div className="card-body">
             <section>
               <h4>NOW</h4>
-              <span className="temperature">
-                {Math.round(props.data.temperature)} °C
-              </span>
+              <WeatherTemperature celsius={props.data.temperature} />
 
               <figure>
                 <WeatherIcon code={props.data.icon} />
