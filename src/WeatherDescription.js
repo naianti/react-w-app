@@ -47,7 +47,7 @@ export default function WeatherDescription(props) {
               <WeatherTemperature celsius={props.data.temperature} />
 
               <figure>
-                <WeatherIcon code={props.data.icon} />
+                <WeatherIcon code={props.data.icon} size={50} />
               </figure>
 
               <h5 className="text-capitalize">{props.data.description}</h5>
