@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  background-image: url(/src/images/background.jpg);
+}
+
 html {
   font-size: 62.5%;
 }
