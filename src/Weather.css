@@ -1,3 +1,13 @@
+.Weather {
+  background-color: #ffffff50;
+  border-radius: 1rem;
+  box-shadow: -0.1rem 1.5rem 1.9rem rgba(245, 198, 225, 0.5);
+  display: block;
+  margin: 0 auto;
+  max-width: 85%;
+  padding: 2rem;
+}
+
 .Weather .button {
   color: black;
   background-color: white;
@@ -10,14 +20,8 @@
   transition: all 500ms ease;
 }
 
-.Weather .button:hover {
-  color: white;
-  cursor: pointer;
-  background-color: rgba(207, 224, 238, 0.979);
-}
-
 .Weather .button-location {
-  background-color: rgb(4, 138, 247);
+  background-color: rgb(4, 89, 247);
   border: none;
   border-radius: 5rem;
   box-shadow: 0 0.2rem 0.2rem rgb(0 0 0 / 10%);
@@ -29,35 +33,30 @@
   transition: all 500ms ease;
 }
 
-.Weather .button-location:hover {
+.Weather .button:hover,
+.button-location:hover {
+  color: white;
   cursor: pointer;
-  background-color: #97a7d6;
+  background-color: rgb(112, 159, 245);
 }
 
-.Weather .card-forecast,
-.card-forecast-temp {
+.Weather .card-forecast {
+  background-color: #b35f870e;
+}
+
+.card-body {
   text-align: center;
 }
 
-.Weather .card-forecast-city,
-.card-forecast-temp,
-.card-forecast {
-  background-color: #e3f6f552;
-}
-
-.Weather .card-forecast-city img {
-  display: inline-flex;
-  width: 1.2rem;
-  margin-left: 1rem;
-}
-
-.Weather .card-forecast-city span {
-  margin-left: 0.6rem;
-}
-
 .temperature {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bolder;
+}
+.units {
+  font-size: 2rem;
+  position: relative;
+  line-height: 1;
+  top: -25px;
 }
 
 .Weather .card-forecast-city,
@@ -106,16 +105,6 @@
   margin: 2rem 0rem;
 }
 
-.Weather {
-  background-color: #9bd3d3be;
-  border-radius: 1rem;
-  box-shadow: -0.1rem 1.5rem 1.9rem rgba(198, 235, 245, 0.5);
-  display: block;
-  margin: 0 auto;
-  max-width: 80%;
-  padding: 2rem;
-}
-
 .Weather #weather-icon {
   display: block;
   margin: auto;
@@ -145,8 +134,7 @@
   font-weight: bolder;
 }
 
-.Weather .card-forecast-temp p,
-.card-forecast-city p {
+.Weather .card-forecast p {
   color: rgb(42, 46, 49);
   font-size: 1.2rem;
   text-transform: capitalize;

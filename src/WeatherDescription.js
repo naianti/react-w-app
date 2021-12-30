@@ -6,9 +6,9 @@ import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherDescription(props) {
   return (
-    <div className="row">
-      <div className="col-sm-5">
-        <div className="card-forecast-city">
+    <div className="row d-flex">
+      <div className="col-sm-6">
+        <div className="card-forecast">
           <div className="card-body">
             <section>
               <h2>{props.data.city + ", " + props.data.country}</h2>
@@ -39,17 +39,16 @@ export default function WeatherDescription(props) {
           </div>
         </div>
       </div>
-      <div className="col-sm-7">
-        <div className="card-forecast-temp">
+      <div className="col-sm-6">
+        <div className="card-forecast">
           <div className="card-body">
             <section>
               <h4>NOW</h4>
-              <WeatherTemperature celsius={props.data.temperature} />
 
+              <WeatherTemperature celsius={props.data.temperature} />
               <figure>
                 <WeatherIcon code={props.data.icon} size={50} />
               </figure>
-
               <h5 className="text-capitalize">{props.data.description}</h5>
               <p>
                 Feels like <span>{Math.round(props.data.feelingTemp)} °C</span>
