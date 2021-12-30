@@ -1,7 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import FormattedDate from "./FormattedDate";
-import FormattedTime from "./FormattedTime";
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherDescription(props) {
@@ -12,29 +11,9 @@ export default function WeatherDescription(props) {
           <div className="card-body">
             <section>
               <h2>{props.data.city + ", " + props.data.country}</h2>
-              <p>
-                <img
-                  src="https://weatherapp-nai-project.netlify.app/images/refresh.png"
-                  alt="refresh icon"
-                />
-                <span>Latest report:</span>
-              </p>
-
-              <p>
-                <img
-                  src="https://weatherapp-nai-project.netlify.app/images/calendar.png"
-                  alt="calendar icon"
-                />
-                <FormattedTime date={props.data.date} />
-              </p>
-
-              <p>
-                <img
-                  src="https://weatherapp-nai-project.netlify.app/images/stopwatch.png"
-                  alt="timer icon"
-                />
+              <span>
                 <FormattedDate date={props.data.date} />
-              </p>
+              </span>
             </section>
           </div>
         </div>
@@ -45,10 +24,10 @@ export default function WeatherDescription(props) {
             <section>
               <h4>NOW</h4>
 
+              <WeatherIcon code={props.data.icon} size={60} />
+
               <WeatherTemperature celsius={props.data.temperature} />
-              <figure>
-                <WeatherIcon code={props.data.icon} size={50} />
-              </figure>
+
               <h5 className="text-capitalize">{props.data.description}</h5>
               <p>
                 Feels like <span>{Math.round(props.data.feelingTemp)} °C</span>

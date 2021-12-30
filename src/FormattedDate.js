@@ -13,5 +13,22 @@ export default function FormattedDate(props) {
 
   let day = days[props.date.getDay()];
 
-  return <span>{day}</span>;
+  let hour = props.date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = props.date.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+
+  return (
+    <span>
+      <img
+        src="https://weatherapp-nai-project.netlify.app/images/refresh.png"
+        alt="refresh-icon"
+      />
+      Latest report: {day} {hour}:{minute}
+    </span>
+  );
 }
