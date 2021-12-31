@@ -8,6 +8,33 @@
   padding: 2rem;
 }
 
+.Weather .card-forecast {
+  background-color: #b35f870e;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.Weather .card-forecast:hover {
+  background: linear-gradient(
+    45deg,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 58%,
+    rgba(255, 255, 255, 0.16) 67%,
+    transparent 68%
+  );
+  background-size: 200% 100%;
+  background-position: 165% 0;
+  transition: 0.7s;
+}
+
+.Weather .form-control {
+  font-size: 1.6rem;
+}
+
+.card-body {
+  text-align: center;
+}
+
 .Weather .button {
   color: black;
   background-color: white;
@@ -40,18 +67,11 @@
   background-color: rgb(112, 159, 245);
 }
 
-.Weather .card-forecast {
-  background-color: #b35f870e;
-}
-
-.card-body {
-  text-align: center;
-}
-
 .temperature {
   font-size: 5rem;
   font-weight: bolder;
 }
+
 .units {
   font-size: 2rem;
   position: relative;
@@ -59,34 +79,38 @@
   top: -25px;
 }
 
-.Weather .card-forecast {
-  min-height: 100%;
-  min-width: 100%;
-}
-
-.Weather .card-forecast:hover {
-  background: linear-gradient(
-    45deg,
-    transparent 50%,
-    rgba(255, 255, 255, 0.05) 58%,
-    rgba(255, 255, 255, 0.16) 67%,
-    transparent 68%
-  );
-  background-size: 200% 100%;
-  background-position: 165% 0;
-  transition: 0.7s;
-}
-
-.Weather .form-control {
-  font-size: 1.8rem;
-}
-
 .Weather .searcher {
-  margin: 3rem 0rem;
+  margin-bottom: 2rem;
+  margin-top: 0.4rem;
+}
+
+.Weather h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.humidity,
+.wind {
+  font-size: 1.1rem;
+  margin-left: 1rem;
 }
 
 @media (min-width: 800px) {
+  .Weather h2 {
+    font-size: 4.1rem;
+    font-weight: bolder;
+  }
+
+  .Weather .card-city {
+    text-align: left;
+    margin-left: 2rem;
+  }
+
   .Weather .form-control {
     font-size: 1.3rem;
+  }
+
+  .Weather .searcher {
+    margin: 2rem 0rem;
   }
 }

@@ -1,4 +1,17 @@
+.App header {
+  margin: 1.2rem;
+}
+
 .App footer {
   text-align: center;
   margin: 1.2rem;
+}
+
+@media (min-width: 800px) {
+  .App h1 {
+    font-size: 4rem;
+  }
+  .App header {
+    margin: 2rem;
+  }
 }

@@ -1,12 +1,11 @@
 .WeatherForecastDay .WeatherForecast-temperature-max {
-  text-align: center;
+  color: rgb(0, 0, 0);
   font-weight: 600;
-  color: rgb(235, 31, 31);
 }
 
 .WeatherForecastDay p {
   text-align: center;
   font-weight: 600;
-  color: rgb(190, 176, 48);
+  color: rgb(9, 100, 238);
   font-size: 1.2rem;
 }

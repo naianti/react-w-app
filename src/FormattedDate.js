@@ -26,6 +26,8 @@ export default function FormattedDate(props) {
     <span>
       <img
         src="https://weatherapp-nai-project.netlify.app/images/refresh.png"
+        width="14"
+        className="m-2"
         alt="refresh-icon"
       />
       Latest report: {day} {hour}:{minute}

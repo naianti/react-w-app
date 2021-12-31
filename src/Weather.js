@@ -15,6 +15,8 @@ export default function Weather(props) {
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       city: response.data.name,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
       country: response.data.sys.country,
       description: response.data.weather[0].description,
       feelingTemp: response.data.main.feels_like,
@@ -69,7 +71,7 @@ export default function Weather(props) {
                   onChange={handleCityChange}
                 />
               </div>
-              <div className="col-6 col-l-4">
+              <div className="col-6">
                 <input type="submit" className="button" value="Go!" />
 
                 <span onClick={getLocation}>

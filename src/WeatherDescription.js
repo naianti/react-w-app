@@ -9,11 +9,19 @@ export default function WeatherDescription(props) {
       <div className="col-sm-6">
         <div className="card-forecast">
           <div className="card-body">
-            <section>
+            <section className="card-city">
               <h2>{props.data.city + ", " + props.data.country}</h2>
               <span>
                 <FormattedDate date={props.data.date} />
               </span>
+              <div className="mt-3 p-3 d-none d-sm-block">
+                <p className="humidity">
+                  Humidity: <strong>{props.data.humidity}%</strong>
+                </p>
+                <p className="wind">
+                  Wind: <strong>{props.data.wind}km/h</strong>
+                </p>
+              </div>
             </section>
           </div>
         </div>
