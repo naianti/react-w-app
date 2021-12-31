@@ -4,7 +4,7 @@
   box-shadow: -0.1rem 1.5rem 1.9rem rgba(245, 198, 225, 0.5);
   display: block;
   margin: 0 auto;
-  max-width: 85%;
+  max-width: 100%;
   padding: 2rem;
 }
 
@@ -43,7 +43,7 @@
   box-shadow: 0 0.5rem 2rem rgb(0 0 0 / 10%);
   font-size: 1.2rem;
   font-weight: bolder;
-  padding: 0.6rem 2.5rem;
+  padding: 0.6rem 1.3rem;
   transition: all 500ms ease;
 }
 
@@ -56,7 +56,7 @@
   font-size: 1.2rem;
   font-weight: bolder;
   margin-left: 0.7rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1rem;
   transition: all 500ms ease;
 }
 
@@ -96,6 +96,11 @@
 }
 
 @media (min-width: 800px) {
+  .Weather {
+    max-width: 85%;
+    padding: 2rem;
+  }
+
   .Weather h2 {
     font-size: 4.1rem;
     font-weight: bolder;
@@ -112,5 +117,16 @@
 
   .Weather .searcher {
     margin: 2rem 0rem;
+  }
+
+  .Weather .button {
+    font-size: 1.2rem;
+    padding: 0.6rem 2.5rem;
+  }
+
+  .Weather .button-location {
+    font-size: 1.2rem;
+    margin-left: 0.7rem;
+    padding: 0.6rem 1.2rem;
   }
 }
